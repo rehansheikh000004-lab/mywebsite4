@@ -1,84 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
-
-  <!-- CSS Styles -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f3f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 50%;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    textarea {
-      height: 120px;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      width: 100%;
-      background: #3498db;
-      color: white;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #2980b9;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="fade-in" style="padding:40px; text-align:center;">
     <h1>📩 Contact Me</h1>
+    <p>Got a question or want to say hi? Fill out the form below 👇</p>
 
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name">
-
-      <label for="Gmail">Gmail:</label>
-      <input type="Gmail" id="Gmail" placeholder="Enter your Gmail">
-
-      <label for="message">Message:</label>
-      <textarea id="message" placeholder="Write your message..."></textarea>
-
-      <button type="submit">Send</button>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Rehan</p>
+  </footer>
+
+  <!-- JavaScript for fade-in -->
+  <script src="script.js"></script>
 </body>
 </html>
