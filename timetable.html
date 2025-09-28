@@ -1,66 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Timetable</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>📅 My Weekly Timetable</h1>
 
-  <table border="1" cellpadding="10" cellspacing="0">
-    <tr>
-      <th>Day</th>
-      <th>9:00 - 10:00</th>
-      <th>10:00 - 11:00</th>
-      <th>11:00 - 12:00</th>
-      <th>2:00 - 3:00</th>
-    </tr>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <tr>
-      <td>Monday</td>
-      <td>Math</td>
-      <td>English</td>
-      <td>Science</td>
-      <td>Coding</td>
-    </tr>
+  <!-- Timetable Section -->
+  <section class="fade-in" style="padding:40px; text-align:center;">
+    <h1>📅 My Weekly Timetable</h1>
+    <p>Here’s how I organize my week!</p>
 
-    <tr>
-      <td>Tuesday</td>
-      <td>History</td>
-      <td>Math</td>
-      <td>English</td>
-      <td>Pool</td>
-    </tr>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>9 AM - 11 AM</th>
+        <th>11 AM - 1 PM</th>
+        <th>2 PM - 4 PM</th>
+        <th>4 PM - 6 PM</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>HTML & CSS</td>
+        <td>JavaScript Basics</td>
+        <td>Break</td>
+        <td>Practice Projects</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Git & GitHub</td>
+        <td>Responsive Design</td>
+        <td>Break</td>
+        <td>Mini Project</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>JavaScript Advanced</td>
+        <td>DOM Manipulation</td>
+        <td>Break</td>
+        <td>Practice Problems</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>React Basics</td>
+        <td>React Components</td>
+        <td>Break</td>
+        <td>React Mini Project</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Backend (Node.js)</td>
+        <td>Express.js</td>
+        <td>Break</td>
+        <td>API Practice</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Database (MongoDB)</td>
+        <td>Database Queries</td>
+        <td>Break</td>
+        <td>CRUD Project</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td colspan="4">🛌 Rest / Revision / Personal Projects</td>
+      </tr>
+    </table>
+  </section>
 
-    <tr>
-      <td>Wednesday</td>
-      <td>Coding</td>
-      <td>Science</td>
-      <td>Math</td>
-      <td>Dance</td>
-    </tr>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Rehan</p>
+  </footer>
 
-    <tr>
-      <td>Thursday</td>
-      <td>English</td>
-      <td>History</td>
-      <td>Coding</td>
-      <td>Biology</td>
-    </tr>
-
-    <tr>
-      <td>Friday</td>
-      <td>Sports</td>
-      <td>Math</td>
-      <td>English</td>
-      <td>Graphs</td>
-    </tr>
-  </table>
-
-  <hr>
-  <h2>Navigate</h2>
-  <a href="about.html">About Me</a> | 
-  <a href="foods.html">My Favorite Foods</a> | 
-  <a href="links.html">Links Page</a>
-
+  <!-- JavaScript for fade-in -->
+  <script src="script.js"></script>
 </body>
 </html>
