@@ -1,24 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Favorite Foods</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My Favorite Foods 🍕</h1>
-  <p>Here are some of the foods I enjoy the most:</p>
 
-  <!-- Ordered List -->
-  <ol>
-    <li>Pizza</li>
-    <li>Biryani</li>
-    <li>Burgers</li>
-    <li>Pasta</li>
-    <li>Ice Cream</li>
-  </ol>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <h2>Food Gallery 🍴</h2>
-  <!-- Food Images -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="Pizza" width="200">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Hyderabadi_Chicken_Biryani.jpg" alt="Biryani" width="200">
+  <!-- Foods Section -->
+  <section class="fade-in" style="padding:40px; text-align:center;">
+    <h1>🍴 My Favorite Foods</h1>
+    <p>Here are some of the foods I love the most!</p>
+
+    <div class="gallery">
+      <div class="card fade-in">
+        <img src="https://picsum.photos/300/200?random=1" alt="Pizza">
+        <h3>🍕 Pizza</h3>
+        <p>Cheesy and delicious with lots of toppings.</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://picsum.photos/300/200?random=2" alt="Biryani">
+        <h3>🍛 Biryani</h3>
+        <p>Spicy and flavorful rice dish with chicken/mutton.</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://picsum.photos/300/200?random=3" alt="Burger">
+        <h3>🍔 Burger</h3>
+        <p>Juicy beef or chicken patty with fresh veggies.</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://picsum.photos/300/200?random=4" alt="Pasta">
+        <h3>🍝 Pasta</h3>
+        <p>Creamy and saucy, perfect Italian delight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Rehan</p>
+  </footer>
+
+  <!-- JavaScript for fade-in -->
+  <script src="script.js"></script>
 </body>
 </html>
