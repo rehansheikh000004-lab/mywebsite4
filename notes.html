@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 80%;
+      height: 100px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #00fff7;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00ccaa;
+    }
+    .note {
+      background: #222;
+      padding: 15px;
+      margin: 10px auto;
+      width: 80%;
+      border-radius: 8px;
+      text-align: left;
+      position: relative;
+    }
+    .delete-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="todo.html">To-Do</a>
+    <a href="clock.html">Clock</a>
+    <a href="notes.html">Notes</a>
+  </nav>
+
+  <h1>My Notes App</h1>
+  <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+  <br>
+  <button onclick="addNote()">Add Note</button>
+  <div id="notesList"></div>
+
+  <script>
+    // Load saved notes on startup
+    window.onload = function() {
+      loadNotes();
+    };
+
+    function addNote() {
+      let noteText = document.getElementById("noteInput").value;
+      if (noteText.trim() === "") {
+        alert("Please write something!");
+        return;
+      }
+
+      let notes = JSON.parse(localStorage.getItem("notes")) || [];
+      notes.push(noteText);
+      localStorage.setItem("notes", JSON.stringify(notes));
+
+      document.getElementById("noteInput").value = "";
+      loadNotes();
+    }
+
+    function loadNotes() {
+      let notes = JSON.parse(localStorage.getItem("notes")) || [];
+      let notesList = document.getElementById("notesList");
+      notesList.innerHTML = "";
+
+      notes.forEach((note, index) => {
+        let noteDiv = document.createElement("div");
+        noteDiv.className = "note";
+        noteDiv.textContent = note;
+
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "X";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.onclick = function() {
+          deleteNote(index);
+        };
+
+        noteDiv.appendChild(deleteBtn);
+        notesList.appendChild(noteDiv);
+      });
+    }
+
+    function deleteNote(index) {
+      let notes = JSON.parse(localStorage.getItem("notes")) || [];
+      notes.splice(index, 1);
+      localStorage.setItem("notes", JSON.stringify(notes));
+      loadNotes();
+    }
+  </script>
+</body>
+</html>
