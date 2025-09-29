@@ -27,6 +27,53 @@ body.dark-mode footer {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  /* To-Do List Styles */
+.todo-container {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.todo-container input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo-container button {
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-container button:hover {
+  background: #0056b3;
+}
+
+#taskList {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#taskList li {
+  background: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#taskList li.done {
+  text-decoration: line-through;
+  color: gray;
+  background: #dcdcdc;
+}
 }
 
 #darkModeBtn:hover {
