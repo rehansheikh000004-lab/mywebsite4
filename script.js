@@ -90,3 +90,41 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock(); // call once at start
+
+// =========================
+// TO-DO LIST APP
+// =========================
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const taskList = document.getElementById("taskList");
+
+  if (!input || !taskList) return; // ignore if not on todo.html
+
+  let taskText = input.value.trim();
+  if (taskText === "") {
+    alert("⚠️ Please enter a task!");
+    return;
+  }
+
+  // Create new list item
+  let li = document.createElement("li");
+  li.textContent = taskText;
+
+  // Add "done" toggle
+  li.addEventListener("click", () => {
+    li.classList.toggle("done");
+  });
+
+  // Add delete button
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "❌";
+  deleteBtn.style.marginLeft = "10px";
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.appendChild(deleteBtn);
+  taskList.appendChild(li);
+
+  input.value = ""; // clear input
+}
