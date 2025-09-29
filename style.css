@@ -74,6 +74,39 @@ body.dark-mode footer {
   color: gray;
   background: #dcdcdc;
 }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .todo-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
 }
 
 #darkModeBtn:hover {
