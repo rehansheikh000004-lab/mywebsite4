@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .quote-box {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin: auto;
+      width: 70%;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px #00fff7;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #00fff7;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="todo.html">To-Do</a>
+    <a href="clock.html">Clock</a>
+    <a href="notes.html">Notes</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="weather.html">Weather</a>
+    <a href="quotes.html">Quotes</a>
+  </nav>
+
+  <h1>Motivational Quotes Generator</h1>
+  <div class="quote-box" id="quoteBox">Click the button to get inspired ✨</div>
+  <button onclick="newQuote()">Get Quote</button>
+
+  <script>
+    const quotes = [
+      "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "Great things never come from comfort zones.",
+      "Push yourself, because no one else is going to do it for you.",
+      "Dream it. Wish it. Do it.",
+      "Success doesn’t just find you. You have to go out and get it.",
+      "The harder you work for something, the greater you’ll feel when you achieve it.",
+      "Don’t stop when you’re tired. Stop when you’re done.",
+      "It always seems impossible until it’s done.",
+      "Wake up with determination. Go to bed with satisfaction."
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quoteBox").textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
