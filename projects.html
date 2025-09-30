@@ -3,13 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="logo.png">
+  <title>My Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 0 10px #00fff7;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00cccc;
+    }
+    .card a {
+      display: block;
+      color: #00fff7;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -17,18 +65,38 @@
     <a href="timetable.html">Timetable</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
   </nav>
 
-  <!-- Projects Section -->
-  <section class="fade-in" style="padding:40px; text-align:center;">
-    <h1>💻 My Projects</h1>
-  </section>
-
-  <footer>
-    <p>© 2025 My Portfolio | Designed by Me</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <h1>My Projects</h1>
+  <div class="projects">
+    <div class="card">
+      <h3>To-Do App</h3>
+      <a href="todo.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Clock</h3>
+      <a href="clock.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Stopwatch</h3>
+      <a href="stopwatch.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Weather App</h3>
+      <a href="weather.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Notes App</h3>
+      <a href="notes.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Calculator</h3>
+      <a href="calculator.html">Open</a>
+    </div>
+    <div class="card">
+      <h3>Quotes Generator</h3>
+      <a href="quotes.html">Open</a>
+    </div>
+  </div>
 </body>
 </html>
